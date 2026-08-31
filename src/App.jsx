@@ -4,13 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import Doctors from './Componenets/Doctors/Doctors'
 import AddDoctors from './Componenets/Doctors/AddDoctors'
+import Routing from './Routing'
+import Header from './Componenets/Outlet/Header'
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-          {/* <Dashboard/> */}
-          <Doctors/>
-          <AddDoctors/>
+          {/* <Routing/> */}
+          <Header/>
       </BrowserRouter>
     </div>
   )

@@ -3,7 +3,7 @@ import CropSquareIcon from '@mui/icons-material/CropSquare';
 import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
-    <div className='border-radius-3'>
+    <div className='border-radius-3 bg-[#FCFCF7] rounded-3'>
         <h3 className='ms-5 my-3'>Main</h3>
         <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 rounded-3 hover:!text-[#4599DB]'>
             <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
