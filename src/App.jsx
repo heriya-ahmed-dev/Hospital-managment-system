@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <BrowserRouter>
           {/* <Dashboard/> */}
-          {/* <Doctors/> */}
+          <Doctors/>
           <AddDoctors/>
       </BrowserRouter>
     </div>

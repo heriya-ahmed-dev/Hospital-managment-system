@@ -3,23 +3,11 @@ import AddIcon from '@mui/icons-material/Add';
 import { useState,useEffect } from 'react';
 import axios from 'axios'
 const Doctors = () => {
-   const [doctors,setDoctors] = useState({
-      image: '',
-      firstname:'',
-      lastname: '',
-      email:'',
-      dob:'',
-      gender:'',
-      address:'',
-      phone:'',
-      department:'',
-      action
-
-   })
+   const [doctors,setDoctors] = useState([])
 
    useEffect(()=>{
       const HanldeGet = async() =>{
-      const response = await axios.get('');
+      const response = await axios.get('http://localhost:5500/AddDocs');
       setDoctors(response.data)
    }
    HanldeGet()
@@ -27,7 +15,7 @@ const Doctors = () => {
    
 
   return (
-    <div>
+    <div className='h-screen'>
         <div className='flex justify-between m-3'>
             <p className='text-[19px] fw-semibold'>Doctors</p>
             <button className='flex bg-[#99C3FF] mx-3 rounded-3 px-2 pt-1 text-[22px] h-[35px] text-white hover:bg-[blue]'>
@@ -55,7 +43,7 @@ const Doctors = () => {
             <p>{items.firstname}</p>
             <p>{items.lastname}</p>
             <p>{items.email}</p>
-            <p>{items.dob}</p>
+            <p>{items.dob.slice('T')[0]}</p>
             <p>{items.gender}</p>
             <p>{items.address}</p>
             <p>{items.phone}</p>
