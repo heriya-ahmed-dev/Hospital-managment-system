@@ -45,7 +45,7 @@ const AddDoctors = () => {
 
     
   return (
-    <form onSubmit={handleSubmit} className='bg-[#D3D3D3] h-screen'>
+    <form onSubmit={handleSubmit} className='bg-[#D3D3D3] h-screen mt-[60px]'>
            <h4 className='flex justify-center p-2'>Add Doctors</h4>
            <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>

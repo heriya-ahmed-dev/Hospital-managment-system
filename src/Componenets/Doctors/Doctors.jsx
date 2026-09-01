@@ -16,10 +16,10 @@ const Doctors = () => {
    
 
   return (
-    <div className='h-screen'>
+    <div className='mt-[80px]'>
         <div className='flex justify-between m-3'>
             <p className='text-[19px] fw-semibold mt-2'>Doctors</p>
-            <Link className='flex bg-[#99C3FF] mx-3 rounded-3 px-2  mt-2 pt-1 text-[22px] h-[35px] text-white hover:bg-[blue] text-decoration-none' to='AddDocs'>
+            <Link className='flex bg-[#0069B9] mx-3 rounded-3 px-2  mt-2 pt-1 text-[22px] h-[35px] text-white hover:bg-[blue] text-decoration-none' to='AddDocs'>
                 <AddIcon/>
                 <p className='text-[17px]'>Add Doctors</p>
             </Link>
