@@ -25,7 +25,7 @@ const AddAppointment = () => {
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
-        await axios.post('',addApp);
+        await axios.post('http://localhost:5500/Appointment',addApp);
         setAddApps({
           patientname:'',
           department: '',
@@ -37,7 +37,7 @@ const AddAppointment = () => {
           action:''
         })
         alert('Data succesfully sent to data base')
-        navigate('/')
+        navigate('/appointments')
     }
  
   return (
@@ -46,7 +46,7 @@ const AddAppointment = () => {
            <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Patient Name</p>
-                    <input className='bg-[white] w-[280px] h-[32px] ps-3' name='patienttname' value={addApp.patientname} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px] h-[32px] ps-3' name='patientname' value={addApp.patientname} onChange={handleChange}/>
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>department</p>
@@ -59,7 +59,7 @@ const AddAppointment = () => {
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Doctor's Name</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='docname' value={addApp.doctorname} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='doctorname' value={addApp.doctorname} onChange={handleChange}/>
                 </div>  
            </div>
 
@@ -70,21 +70,21 @@ const AddAppointment = () => {
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Appointment Time</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='apptime' value={addApp.apptime} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='apptime' value={addApp.apptime} onChange={handleChange} type="tel"/>
                 </div>  
            </div>
 
             <div className='flex justify-center'>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1 flex justify-center'>Patient Email</p>
-                    <input className='bg-[white] w-[680px]  h-[32px] ps-3' name='patientemail' value={addApp.patientemail} onChange={handleChange}/>
+                    <input className='bg-[white] w-[680px]  h-[32px] ps-3' name='patientemail' value={addApp.patientemail} onChange={handleChange} type='email'/>
                 </div> 
            </div>
 
             <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Patient Phone</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='patientphone' value={addApp.patientphone} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='patientphone' value={addApp.patientphone} onChange={handleChange} type='tel'/>
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Action</p>

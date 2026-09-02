@@ -16,7 +16,7 @@ const Doctors = () => {
    
 
   return (
-    <div className='mt-[80px]'>
+    <div className='mt-[80px] mx-3 mr-4'>
         <div className='flex justify-between m-3'>
             <p className='text-[19px] fw-semibold mt-2'>Doctors</p>
             <Link className='flex bg-[#0069B9] mx-3 rounded-3 px-2  mt-2 pt-1 text-[22px] h-[35px] text-white hover:bg-[blue] text-decoration-none' to='AddDocs'>
@@ -39,18 +39,19 @@ const Doctors = () => {
    {doctors.map((items)=>{
     return(
         <div key={items.id}>
-             <div className='text-black border-1 w-full'> </div>
+             <div className='text-black border-1 w-full mr-4'>
             <div className='flex gap-[35px] overflow-x-hidden mx-5 ps-3 my-3 text-[17px]'>
             <p className='w-[17%]'><img src={items.image}/></p>
             <p className='w-[17%]'>{items.firstname}</p>
             <p className='w-[17%]'>{items.lastname}</p>
             <p className='w-[17%] truncate'>{items.email}</p>
-            <p className='w-[17%]'>{items.dob.slice('T')[0]}</p>
+            <p className='w-[17%]'>{items.dob.split('T')[0]}</p>
             <p className='w-[17%]'>{items.gender}</p>
             <p className='w-[17%]'>{items.address}</p>
             <p className='w-[17%]'>{items.phone}</p>
             <p className='w-[17%]'>{items.department}</p>
             <p className='w-[17%]'>{items.action}</p>
+        </div>
         </div>
         </div>
     )

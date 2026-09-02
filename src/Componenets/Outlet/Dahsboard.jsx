@@ -7,7 +7,7 @@ const Dashboard = () => {
         <h3 className='ms-5 my-3'>Main</h3>
         <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 rounded-3 hover:!text-[#4599DB]'>
             <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
-            <Link className='text-decoration-none '>
+            <Link className='text-decoration-none' to='/'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Dashboard
             </p>
@@ -16,7 +16,7 @@ const Dashboard = () => {
 
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
             <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
-            <Link className='text-decoration-none '>
+            <Link className='text-decoration-none ' to='doctors'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Doctors
             </p>
@@ -24,7 +24,7 @@ const Dashboard = () => {
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
             <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
-            <Link className='text-decoration-none '>
+            <Link className='text-decoration-none' to='appointments'>
             <p className='text-black text-[20px] hover:!text-[#4599DB] h'>
                Appointments
             </p>

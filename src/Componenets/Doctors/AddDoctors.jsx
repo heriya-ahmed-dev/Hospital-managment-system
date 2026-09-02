@@ -40,7 +40,7 @@ const AddDoctors = () => {
              action:''
         })
         alert('Data succesfully sent to data base')
-        navigate('/home')
+        navigate('/doctors')
     }
 
     
@@ -64,7 +64,7 @@ const AddDoctors = () => {
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Email</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='email' value={addDocs.email} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='email' value={addDocs.email} onChange={handleChange} type='email'/>
                 </div>  
            </div>
 
@@ -89,7 +89,7 @@ const AddDoctors = () => {
             <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Phone</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='phone' value={addDocs.phone} onChange={handleChange}/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='phone' value={addDocs.phone} onChange={handleChange} type='tel'/>
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Image</p>
