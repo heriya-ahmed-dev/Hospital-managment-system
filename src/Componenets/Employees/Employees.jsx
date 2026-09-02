@@ -36,7 +36,7 @@ const Employees = () => {
    {Employees.map((items)=>{
     return(
         <div key={items.id}>
-             <div className='text-black border-1 w-full mr-4'>
+             <div className='text-black border-1 w-full mr-4'></div>
             <div className='flex gap-[35px] overflow-x-hidden mx-5 ps-3 my-3 text-[17px]'>
             <p className='w-[17%]'>{items.employeename}</p>
             <p className='w-[17%] truncate'>{items.email}</p>
@@ -45,7 +45,6 @@ const Employees = () => {
             <p className='w-[17%]'>{items.joindate}</p>
             <p className='w-[17%]'>{items.role}</p>
             <p className='w-[17%]'>{items.action}</p>
-        </div>
         </div>
         </div>
     )

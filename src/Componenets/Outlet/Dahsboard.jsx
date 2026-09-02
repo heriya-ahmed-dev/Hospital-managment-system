@@ -1,12 +1,20 @@
 import React from 'react';
 import CropSquareIcon from '@mui/icons-material/CropSquare';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PeopleIcon from '@mui/icons-material/People';
+import EventIcon from '@mui/icons-material/Event';
+import EmailIcon from '@mui/icons-material/Email';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import BusinessIcon from '@mui/icons-material/Business';
+import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <div className='border-radius-3 bg-[#FCFCF7] rounded-3'>
         <h3 className='ms-5 my-3'>Main</h3>
         <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 rounded-3 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <DashboardIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='/'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Dashboard
@@ -15,7 +23,7 @@ const Dashboard = () => {
         </div>
 
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <MedicalServicesIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none ' to='doctors'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Doctors
@@ -23,7 +31,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <EventIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='appointments'>
             <p className='text-black text-[20px] hover:!text-[#4599DB] h'>
                Appointments
@@ -31,7 +39,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <BusinessIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Departments
@@ -39,7 +47,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <PeopleIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='Employees'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Employees
@@ -47,7 +55,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <PaymentsIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Payroll
@@ -55,7 +63,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <EmailIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Email
@@ -64,10 +72,10 @@ const Dashboard = () => {
         </div>
 
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <CropSquareIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <LocalPharmacyIcon className='hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
-               Medical Story
+               Medicine Store
             </p>
             </Link>
         </div>

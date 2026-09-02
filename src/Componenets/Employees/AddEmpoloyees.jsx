@@ -16,7 +16,7 @@ const AddEmployees = () => {
     const navigate = useNavigate()
      const handleChange = (e) => {
         setAddEmployee({
-            ...addDocs,
+            ...addEmployee,
             [e.target.name] : e.target.value
         })
     }
@@ -24,7 +24,7 @@ const AddEmployees = () => {
     const handleSubmit = async(e) =>{
         e.preventDefault();
         await axios.post('http://localhost:5500/Employees',addEmployee);
-        setAddDocs({
+        setAddEmployee({
             employeename:'',
             email:'',
             gender: '',
@@ -58,7 +58,7 @@ const AddEmployees = () => {
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Gender</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='gender' value={addEmployee.gender} onChange={handleChange} type='email'/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='gender' value={addEmployee.gender} onChange={handleChange}/>
                 </div>  
            </div>
 
@@ -83,7 +83,7 @@ const AddEmployees = () => {
             <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Action</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='action' value={addEmployee.action} onChange={handleChange} type='file'/>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='action' value={addEmployee.action} onChange={handleChange}/>
                 </div>  
            </div>
 
