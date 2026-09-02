@@ -5,7 +5,8 @@ import Doctors from './Componenets/Doctors/Doctors'
 import AddDoctors from './Componenets/Doctors/AddDoctors'
 import Appointments from './Componenets/Appointment/Appointments'
 import AddAppointment from './Componenets/Appointment/Addappointments'
-import Dashboard from './Componenets/Outlet/Dahsboard'
+import Employees from './Componenets/Employees/Employees'
+import AddEmployees from './Componenets/Employees/AddEmpoloyees'
 const Routing = () => {
   return (
     <div>
@@ -15,6 +16,8 @@ const Routing = () => {
                 <Route path='doctors/AddDocs' element={<AddDoctors/>}/>
                 <Route path='appointments' element={<Appointments/>}/>
                 <Route path='appointments/addapps' element={<AddAppointment/>}/>
+                <Route path='/Employees' element={<Employees/>}/>
+                <Route path='/Employees/Addemployee' element={<AddEmployees/>}/>
             </Route>
         </Routes>
     </div>
