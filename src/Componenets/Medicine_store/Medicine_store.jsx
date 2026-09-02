@@ -8,7 +8,7 @@ const MedicineStore = () => {
 
    useEffect(()=>{
       const HanldeGet = async() =>{
-      const response = await axios.get('http://localhost:5500/');
+      const response = await axios.get('http://localhost:5500/medicineStore');
       setMedicineStore(response.data)
    }
    HanldeGet()
