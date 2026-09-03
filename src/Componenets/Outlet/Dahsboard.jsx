@@ -14,7 +14,7 @@ const Dashboard = () => {
     <div className='border-radius-3 bg-[#FCFCF7] rounded-3'>
         <h3 className='ms-5 my-3'>Main</h3>
         <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 rounded-3 hover:!text-[#4599DB]'>
-            <DashboardIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <DashboardIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='/'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Dashboard
@@ -23,7 +23,7 @@ const Dashboard = () => {
         </div>
 
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <MedicalServicesIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <MedicalServicesIcon className=' text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none ' to='doctors'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Doctors
@@ -31,7 +31,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <EventIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <EventIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='appointments'>
             <p className='text-black text-[20px] hover:!text-[#4599DB] h'>
                Appointments
@@ -39,7 +39,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <BusinessIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <BusinessIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Departments
@@ -47,7 +47,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <PeopleIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <PeopleIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='Employees'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Employees
@@ -55,7 +55,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <PaymentsIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <PaymentsIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Payroll
@@ -63,7 +63,7 @@ const Dashboard = () => {
             </Link>
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <EmailIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <EmailIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none '>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Email
@@ -72,7 +72,7 @@ const Dashboard = () => {
         </div>
 
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
-            <LocalPharmacyIcon className='hover:text-[#4599DB] mt-[5px]'/>
+            <LocalPharmacyIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='MedicineStore'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Medicine Store

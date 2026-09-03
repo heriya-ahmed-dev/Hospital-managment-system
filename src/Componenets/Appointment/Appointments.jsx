@@ -4,6 +4,10 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 const Appointments = () => {
+    const [currentpage , setCurrentpage] = useState(1)
+    const ItemsPerPage = 4
+    const LastIndex = currentpage * ItemsPerPage;
+    const FirstIndex = LastIndex - ItemsPerPage;
    const [app,setapp] = useState([])
 
    useEffect(()=>{
@@ -13,6 +17,21 @@ const Appointments = () => {
    }
    HanldeGet()
    },[])
+   const currentPageapp = app.slice(FirstIndex,LastIndex);
+   const TotalPage = Math.ceil(app/ItemsPerPage);
+
+   const NextPage = () =>{
+    if(currentpage < Totalpage){
+       setcurrentpage(currentpage+1)
+    }    
+      
+   }
+
+   const PrevPage = () =>{
+    if(currentpage > 1){
+        setcurrentpage(currentpage - 1)
+    }
+   }
    
   return (
     <div className='mt-[80px] mx-1'>
@@ -33,7 +52,7 @@ const Appointments = () => {
             <h5 className='w-[12%]'>Patient phone</h5>
             <h5 className='w-[12%]'>Action</h5>
         </div>
-   {app.map((items)=>{
+   {currentPageapp.map((items)=>{
     return(
         <div key={items.id}>
              <div className='text-black border-1 w-full'> </div>
@@ -50,7 +69,11 @@ const Appointments = () => {
         </div>
     )
    })}
-
+       
+       <div className='flex justify-center gap-5 mb-4'>
+        <button className='w-[80px] bg-[#2FB674] hover:bg-[green] rounded-2 h-[35px] text-white' onClick={PrevPage}>Previous</button>
+        <button className='w-[80px] bg-[#2FB674] hover:bg-[green] rounded-2 h-[35px] text-white' onClick={NextPage}>Next</button>
+     </div>
           
     </div>
   )

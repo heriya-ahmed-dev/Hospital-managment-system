@@ -7,6 +7,7 @@ const AddMedicine = () => {
     const [addMedicine,setAddMedicine] = useState({
       medicineCode:'',
       medicineNum: '',
+      Purchasedate:'',
       expiry:'',
       expiryEnd:'',
       price:'',
@@ -28,6 +29,7 @@ const AddMedicine = () => {
         setAddMedicine({
           medicineCode:'',
           medicineNum: '',
+          Purchasedate:'',
           expiry:'',
           expiryEnd:'',
           price:'',
@@ -38,14 +40,6 @@ const AddMedicine = () => {
         navigate('/MedicineStore')
     }
 
-    //  <p className='w-[17%]'>{items.medicineCode}</p>
-    //         <p className='w-[17%]'>{items.medicineNum}</p>
-    //         <p className='w-[17%]'>{items.expiry}</p>
-    //         <p className='w-[17%]'>{items.expiryEnd}</p>
-    //         <p className='w-[17%]'>{items.price}</p>
-    //         <p className='w-[17%]'>{items.quantity}</p>
-    //         <p className='w-[17%]'>{items.action}</p>
- 
   return (
     <form onSubmit={handleSubmit} className='bg-[#D3D3D3] h-screen mt-[60px]'>
            <h4 className='flex justify-center p-2'>Add Medicine</h4>
@@ -61,7 +55,7 @@ const AddMedicine = () => {
            </div>
 
             <div className='flex justify-center gap-[120px]'>
-                <div className='my-1 ps-[280px] text-[18px] my-1'>          
+             <div className='my-1 ps-[280px] text-[18px] my-1'>          
                 </div>
                 <div className='my-1'>
                     <p className='ps-4 text-[18px] my-1'>Expiry</p>
@@ -93,6 +87,11 @@ const AddMedicine = () => {
                     <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='action' value={addMedicine.action} onChange={handleChange}/>
                 </div>
                 <div className='my-1'>
+                    <div className='my-1'>
+                    <p className='ps-4 text-[18px] my-1'>Purchase Date</p>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='Purchasedate' value={addMedicine.Purchasedate} onChange={handleChange} type='date'/>
+                </div>
+
                 </div>  
            </div>
       
