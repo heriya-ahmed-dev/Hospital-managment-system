@@ -4,8 +4,11 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const AddDepartment = () => {
     const [AddDepartment,setAddDepartment] = useState({
-     department:'',
-     headDocs
+      department:'',
+      headDocs:'',
+      doctors:'',
+      patients:'',
+      status:''
     });
     
     const navigate = useNavigate()
@@ -20,30 +23,28 @@ const AddDepartment = () => {
         e.preventDefault();
         await axios.post('http://localhost:5500/AddPatient',AddDepartment);
         setAddDepartment({
-             name:'',
-             email:'',
-             dob:'',
-             age:'',
-             gender:'',
-             address:'',
-             phone:'',
+            department:'',
+            headDocs:'',
+            doctors:'',
+            patients:'',
+            status:''
         })
         alert('Data succesfully sent to data base')
-        navigate('/patients')
+        navigate('/Departments')
     }
 
     
   return (
     <form onSubmit={handleSubmit} className='bg-[#D3D3D3] h-screen mt-[60px]'>
-           <h4 className='flex justify-center p-2'>Add Patients</h4>
+           <h4 className='flex justify-center p-2'>Add Department</h4>
            <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'> Name</p>
-                    <input className='bg-[white] w-[280px] h-[32px] ps-3' name='name' value={AddDepartment.name} onChange={handleChange}/>
+                    <p className='ps-4 text-[18px] my-1'> Department</p>
+                    <input className='bg-[white] w-[280px] h-[32px] ps-3' name='department' value={AddDepartment.department} onChange={handleChange}/>
                 </div>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'>Email</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='email' value={AddDepartment.email} onChange={handleChange} type='email'/>
+                    <p className='ps-4 text-[18px] my-1'>Head Doctors</p>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='headDocs' value={AddDepartment.headDocs} onChange={handleChange} />
                 </div>  
            </div>
 
@@ -52,26 +53,27 @@ const AddDepartment = () => {
                     
                 </div>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'>Date Of Birth</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='dob' value={AddDepartment.dob} onChange={handleChange} type='date'/>
+                    <p className='ps-4 text-[18px] my-1'>Doctors</p>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='doctors' value={AddDepartment.doctors} onChange={handleChange}/>
                 </div>  
            </div>
 
             <div className='flex justify-center gap-[120px]'>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'> Age</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='age' value={AddDepartment.age} onChange={handleChange} />
+                    <p className='ps-4 text-[18px] my-1'>Patients</p>
+                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='patients' value={AddDepartment.patients} onChange={handleChange} />
                 </div>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'>Gender</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='gender' value={AddDepartment.gender} onChange={handleChange}/>
-                </div>  
+                   
+                      </div>  
            </div>
 
             <div className='flex justify-center'>
                 <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1 flex justify-center'>Address</p>
+                    <select option=''>
+                    <p className='ps-4 text-[18px] my-1 flex justify-center'>status</p>
                     <input className='bg-[white] w-[680px]  h-[32px] ps-3' name='address' value={AddDepartment.address} onChange={handleChange}/>
+                    </select>
                 </div> 
            </div>
 
