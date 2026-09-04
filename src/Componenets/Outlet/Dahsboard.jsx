@@ -51,7 +51,7 @@ const Dashboard = () => {
         </div>
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
             <BusinessIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
-            <Link className='text-decoration-none '>
+            <Link className='text-decoration-none' to='departments'>
             <p className='text-black text-[20px] hover:!text-[#4599DB]'>
                Departments
             </p>

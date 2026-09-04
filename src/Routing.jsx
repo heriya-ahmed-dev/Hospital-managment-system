@@ -11,6 +11,8 @@ import MedicineStore from './Componenets/Medicine_store/Medicine_store'
 import AddMedicine from './Componenets/Medicine_store/AddMedicine'
 import Patients from './Componenets/Patients/Patients'
 import AddPatients from './Componenets/Patients/AddPatients'
+import Departments from './Componenets/Medicine_store/Departments/Departments'
+import AddDepartment from './Componenets/Medicine_store/Departments/AddDepartment'
 const Routing = () => {
   return (
     <div>
@@ -26,6 +28,8 @@ const Routing = () => {
                 <Route path='MedicineStore/AddMedicine' element={<AddMedicine/>}/>
                 <Route path='patients' element={<Patients/>}/>
                 <Route path='patients/AddPatiens' element={<AddPatients/>}/>
+                <Route path='departments' element={<Departments/>}/>
+                <Route path='departments/AddDepartments' element={<AddDepartment/>}/>
             </Route>
         </Routes>
     </div>

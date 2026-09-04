@@ -10,6 +10,9 @@ const AddDepartment = () => {
       patients:'',
       status:''
     });
+
+    const [bgcolor,setbgColor] = useState('white')
+    const [color,setColor] = useState('black')
     
     const navigate = useNavigate()
      const handleChange = (e) => {
@@ -32,7 +35,23 @@ const AddDepartment = () => {
         alert('Data succesfully sent to data base')
         navigate('/Departments')
     }
+  
+    const handleColor = (e) =>{
+        if(e.target.value == 'Active'){
+            setbgColor('#22c55e');
+            setColor('white')
 
+        }
+        else if(e.target.value == 'Inactive'){
+            setbgColor('#ef4444'); 
+            setColor('white')
+        }
+        else{
+            setbgColor('white')
+            setColor('black')
+        }
+    }
+    
     
   return (
     <form onSubmit={handleSubmit} className='bg-[#D3D3D3] h-screen mt-[60px]'>
@@ -70,21 +89,25 @@ const AddDepartment = () => {
 
             <div className='flex justify-center'>
                 <div className='my-1'>
-                    <select option=''>
+
+                        
                     <p className='ps-4 text-[18px] my-1 flex justify-center'>status</p>
-                    <input className='bg-[white] w-[680px]  h-[32px] ps-3' name='address' value={AddDepartment.address} onChange={handleChange}/>
+                    <select className=' w-[250px]  h-[32px] ps-3' name='status' value={AddDepartment.status} onChange={
+                        (e)=>{handleChange(e);handleColor(e)}
+                    }
+                      style={{backgroundColor:bgcolor,
+                              color:color
+                      }}
+                    >
+                         <option value="" className='text-[black]'>Select Status</option>
+                         <option value="Active" >Active</option>
+                         <option value="Inactive">Inactive</option>
                     </select>
+                    
                 </div> 
            </div>
 
-            <div className='flex justify-center gap-[120px]'>
-                <div className='my-1'>
-                    <p className='ps-4 text-[18px] my-1'>Phone</p>
-                    <input className='bg-[white] w-[280px]  h-[32px] ps-3' name='phone' value={AddDepartment.phone} onChange={handleChange} type='tel'/>
-                </div>
-                <div className='my-1'>
-                </div>  
-           </div>
+            
 
        
            <div className='flex justify-center my-3'>
