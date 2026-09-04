@@ -8,6 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import BusinessIcon from '@mui/icons-material/Business';
 import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
+import PersonalInjuryIcon from '@mui/icons-material/PersonalInjury';
 import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
@@ -30,6 +31,16 @@ const Dashboard = () => {
             </p>
             </Link>
         </div>
+
+         <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
+            <PersonalInjuryIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
+            <Link className='text-decoration-none' to='patients'>
+            <p className='text-black text-[20px] hover:!text-[#4599DB] h'>
+               Patients
+            </p>
+            </Link>
+        </div>
+
          <div className='flex gap-2 my-2 mx-4 hover:bg-[#F5F5F5] w-[200px] pt-1 ps-2 hover:!text-[#4599DB]'>
             <EventIcon className='text-[#850883] hover:text-[#4599DB] mt-[5px]'/>
             <Link className='text-decoration-none' to='appointments'>

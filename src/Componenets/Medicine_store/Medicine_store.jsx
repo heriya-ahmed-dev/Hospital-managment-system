@@ -38,6 +38,7 @@ const MedicineStore = () => {
         setPageInput(page)
         setcurrentpage(pageInput)
      }
+     setPageInput('')
    }
 
  
