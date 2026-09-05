@@ -55,7 +55,7 @@ const Departments = () => {
                 <p className='text-[17px]'>Add Departments</p>
             </Link>
         </div>
-        <div className='flex justify-left m-4 gap-[50px]'>
+        <div className='flex justify-between m-4 gap-[50px]'>
             <div>
                 <p className='text-[18px] ps-1' >Inter Page No</p>
                 <div className='flex justify gap-2'>
@@ -63,6 +63,12 @@ const Departments = () => {
                     <button className='bg-[#2FB674] hover:bg-[green] text-white w-[30px] rounded-2 h-[30px] mt-2' onClick={handlePage}>Go</button>
                 </div>
             </div>
+
+            <Link className='mt-[-45px] text-decoration-none' to='DepDescription' >
+               <button className='flex bg-[#663398] hover:bg-[#4B0081] text-white border-1  border-black mx-3 rounded-3 px-2  mt-2 pt-1 text-[20px] h-[35px] text-black text-decoration-none'>Department Description
+              </button>
+            </Link>
+            
             <div>
                  <p className='text-[18px] ps-3'>Search by Department</p>
             <div className='flex bg-[whitesmoke] border-1  border-black mx-3 rounded-3 px-2  mt-2 pt-1 text-[20px] h-[35px] text-black  text-decoration-none focus:outline-black'>

@@ -25,7 +25,7 @@ const AddDepDescription = () => {
             description:''
         })
         alert('Data succesfully sent to data base')
-        navigate('/')
+        navigate('/departments/DepDescription')
     }
   
    

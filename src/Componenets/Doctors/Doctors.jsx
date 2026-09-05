@@ -29,13 +29,7 @@ const Doctors = () => {
           setcurrentpage(currentpage - 1)
       }
      }
-   useEffect(()=>{
-      const HanldeGet = async() =>{
-      const response = await axios.get('http://localhost:5500/AddDocs');
-      setDoctors(response.data)
-   }
-   HanldeGet()
-   },[])
+   
    const handlePage = () =>{
      const page = Number(pageInput)
 
@@ -45,6 +39,13 @@ const Doctors = () => {
      }
      setPageInput('')
    }
+   useEffect(()=>{
+      const HanldeGet = async() =>{
+      const response = await axios.get('http://localhost:5500/AddDocs');
+      setDoctors(response.data)
+   }
+   HanldeGet()
+   },[])
 
   return (
     <div className='mt-[80px] mx-3 mr-4'>

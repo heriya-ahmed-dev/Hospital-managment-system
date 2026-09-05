@@ -13,6 +13,8 @@ import Patients from './Componenets/Patients/Patients'
 import AddPatients from './Componenets/Patients/AddPatients'
 import Departments from './Componenets/Medicine_store/Departments/Departments'
 import AddDepartment from './Componenets/Medicine_store/Departments/AddDepartment'
+import DepDescription from './Componenets/Medicine_store/Departments/DepDescription'
+import AddDepDescription from './Componenets/Medicine_store/Departments/AddDepDescription'
 const Routing = () => {
   return (
     <div>
@@ -30,6 +32,8 @@ const Routing = () => {
                 <Route path='patients/AddPatiens' element={<AddPatients/>}/>
                 <Route path='departments' element={<Departments/>}/>
                 <Route path='departments/AddDepartments' element={<AddDepartment/>}/>
+                <Route path='departments/DepDescription' element={<DepDescription/>}/>
+                <Route path='departments/DepDescription/AddDepDescription' element={<AddDepDescription/>}/>
             </Route>
         </Routes>
     </div>
